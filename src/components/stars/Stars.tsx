@@ -15,14 +15,14 @@ export function Stars() {
       if (!canvas) return;
       ctx = canvas.getContext("2d");
       if (!ctx) return;
-      const w = (canvas.width = window.innerHeight);
-      const h = (canvas.height = window.innerWidth);
-      const screenDelta = Math.sqrt(w + h) / 100;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const screenDelta = Math.sqrt(canvas.width + canvas.height) / 100;
       const useAmount = 250 * screenDelta;
 
       for (let i = 0; i < useAmount; i++) {
-        const x = Math.random() * w;
-        const y = Math.random() * h;
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
         const xSpeed = Math.random() * (2.4 / 10) - 2.4 / 20;
         const ySpeed = Math.random() * (2.4 / 10) - 2.4 / 20;
         const newPoint = new StarPoint(x, y, xSpeed, ySpeed);
@@ -32,7 +32,7 @@ export function Stars() {
 
       if (ctx) {
         ctx.fillStyle = "rgba(252, 247, 255, 0.5)";
-        ctx.fillRect(1, 1, w, h);
+        ctx.fillRect(1, 1, canvas.width, canvas.height);
       }
 
       draw();
@@ -63,7 +63,7 @@ export function Stars() {
           if (distance <= useDistance && ctx) {
             const alpha = 1 - distance / useDistance;
 
-            ctx.strokeStyle = `hsla(20, 60%, 10%, ${alpha})`;
+            ctx.strokeStyle = `hsla(15, 60%, 10%, ${alpha})`;
 
             ctx.beginPath();
             ctx.moveTo(point.x, point.y);
@@ -89,10 +89,11 @@ export function Stars() {
       const canvas = canvasRef.current;
 
       if (ctx && canvas) {
-        const w = canvas.width;
-        const h = canvas.height;
+        console.log("changed");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         ctx.fillStyle = "rgba(252, 247, 255, 0.5)";
-        ctx.fillRect(0, 0, w, h);
+        ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
       }
     };
 
@@ -106,11 +107,5 @@ export function Stars() {
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      width={window.innerWidth}
-      height={window.innerHeight}
-    />
-  );
+  return <canvas ref={canvasRef} />;
 }
