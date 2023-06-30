@@ -1,10 +1,12 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { StarPoint } from "./StarPoint";
 import "./Stars.scss";
 
 export function Stars() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const pointsRef = useRef<StarPoint[]>([]);
+  const [background, setBackground] = useState("#1b1b1b");
+  const [starColor, setStarColor] = useState("rgba(252, 247, 255, 0.5)");
 
   useEffect(() => {
     let animationFrameId: number;
@@ -31,7 +33,7 @@ export function Stars() {
       }
 
       if (ctx) {
-        ctx.fillStyle = "rgba(252, 247, 255, 0.5)";
+        ctx.fillStyle = starColor;
         ctx.fillRect(1, 1, canvas.width, canvas.height);
       }
 
@@ -43,11 +45,11 @@ export function Stars() {
 
       ctx.globalCompositeOperation = "source-over";
 
-      ctx.fillStyle = "#1b1b1b";
+      ctx.fillStyle = background;
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
       ctx.lineWidth = 1.4;
-      ctx.fillStyle = "rgba(252, 247, 255, 0.5)";
+      ctx.fillStyle = starColor;
 
       const screenDelta = Math.sqrt(ctx.canvas.width + ctx.canvas.height) / 100;
       const useDistance = 210 * screenDelta;
@@ -92,7 +94,7 @@ export function Stars() {
         console.log("changed");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        ctx.fillStyle = "rgba(252, 247, 255, 0.5)";
+        ctx.fillStyle = starColor;
         ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
       }
     };

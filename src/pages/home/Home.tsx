@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <>
       <Stars />
+      <h1>Hello</h1>
     </>
   );
 }
