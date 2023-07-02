@@ -13,6 +13,9 @@ export function Stars() {
     let ctx: CanvasRenderingContext2D | null = null;
 
     const setup = () => {
+      const amount = 200;
+      const baseSpeed = 2.4;
+
       const canvas = canvasRef.current;
       if (!canvas) return;
       ctx = canvas.getContext("2d");
@@ -20,13 +23,13 @@ export function Stars() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       const screenDelta = Math.sqrt(canvas.width + canvas.height) / 100;
-      const useAmount = 250 * screenDelta;
+      const useAmount = amount * screenDelta;
 
       for (let i = 0; i < useAmount; i++) {
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
-        const xSpeed = Math.random() * (2.4 / 10) - 2.4 / 20;
-        const ySpeed = Math.random() * (2.4 / 10) - 2.4 / 20;
+        const xSpeed = Math.random() * (baseSpeed / 10) - baseSpeed / 20;
+        const ySpeed = Math.random() * (baseSpeed / 10) - baseSpeed / 20;
         const newPoint = new StarPoint(x, y, xSpeed, ySpeed);
 
         pointsRef.current.push(newPoint);
