@@ -5,8 +5,10 @@ import "./Stars.scss";
 export function Stars() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const pointsRef = useRef<StarPoint[]>([]);
-  const [background, setBackground] = useState("#1b1b1b");
-  const [starColor, setStarColor] = useState("rgba(252, 247, 255, 0.5)");
+
+  //can be set dynamically later if desired
+  const [background] = useState("#1b1b1b");
+  const [starColor] = useState("rgba(252, 247, 255, 0.5)");
 
   useEffect(() => {
     let animationFrameId: number;

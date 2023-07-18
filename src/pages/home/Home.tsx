@@ -4,13 +4,14 @@ import "./Home.scss";
 
 export default function Home() {
   const typewriterRef = useRef<HTMLParagraphElement | null>(null);
-  const typewriterContent = [
-    "web design.",
-    "graphic design.",
-    "backend programming.",
-    "database management.",
-    "fun stuff!",
-  ];
+
+  // const typewriterContent = [
+  //   "web design.",
+  //   "graphic design.",
+  //   "backend programming.",
+  //   "database management.",
+  //   "fun stuff!",
+  // ];
 
   useEffect(() => {
     //finish this to change the text
