@@ -96,7 +96,6 @@ export function Stars() {
       const canvas = canvasRef.current;
 
       if (ctx && canvas) {
-        console.log("changed");
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         ctx.fillStyle = starColor;
@@ -112,7 +111,7 @@ export function Stars() {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [background, starColor]);
 
   return <canvas ref={canvasRef} />;
 }
