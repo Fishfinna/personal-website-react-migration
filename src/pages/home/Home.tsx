@@ -8,15 +8,15 @@ export default function Home() {
   const isDeletingRef = useRef(false);
   const loopNumRef = useRef(0);
   const [typewriterState, updateTypeWriter] = useState<string>("");
-  const typewriterContent = [
-    "web development.",
-    "graphic design.",
-    "programming.",
-    "fun stuff!",
-  ];
 
   useEffect(() => {
     const tick = () => {
+      const typewriterContent = [
+        "web development.",
+        "graphic design.",
+        "programming.",
+        "fun stuff!",
+      ];
       const i = loopNumRef.current % typewriterContent.length;
       const fullTxt = typewriterContent[i];
 
@@ -28,7 +28,7 @@ export default function Home() {
 
       updateTypeWriter(txtRef.current);
 
-      let delta = 140 - Math.random() * 100;
+      let delta = 150 - Math.random() * 100;
 
       if (isDeletingRef.current) {
         delta /= 2;
@@ -40,7 +40,7 @@ export default function Home() {
       } else if (isDeletingRef.current && txtRef.current === "") {
         isDeletingRef.current = false;
         loopNumRef.current++;
-        delta = 1000;
+        delta = 200;
       }
 
       setTimeout(tick, delta);
