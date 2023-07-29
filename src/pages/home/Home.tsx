@@ -1,63 +1,32 @@
-import { useRef, useEffect, useState } from "react";
+import { useState } from "react";
 import { Stars } from "../../components/stars/Stars";
+import { TypeWriter } from "../../components/typewriter/typewriter";
 import "./Home.scss";
 
 export default function Home() {
-  const typewriterRef = useRef(null);
-  const txtRef = useRef("");
-  const isDeletingRef = useRef(false);
-  const loopNumRef = useRef(0);
-  const [typewriterState, updateTypeWriter] = useState<string>("");
-
-  useEffect(() => {
-    const tick = () => {
-      const typewriterContent = [
-        "web development.",
-        "graphic design.",
-        "programming.",
-        "fun stuff!",
-      ];
-      const i = loopNumRef.current % typewriterContent.length;
-      const fullTxt = typewriterContent[i];
-
-      if (isDeletingRef.current) {
-        txtRef.current = fullTxt.substring(0, txtRef.current.length - 1);
-      } else {
-        txtRef.current = fullTxt.substring(0, txtRef.current.length + 1);
-      }
-
-      updateTypeWriter(txtRef.current);
-
-      let delta = 150 - Math.random() * 100;
-
-      if (isDeletingRef.current) {
-        delta /= 2;
-      }
-
-      if (!isDeletingRef.current && txtRef.current === fullTxt) {
-        delta = 500;
-        isDeletingRef.current = true;
-      } else if (isDeletingRef.current && txtRef.current === "") {
-        isDeletingRef.current = false;
-        loopNumRef.current++;
-        delta = 200;
-      }
-
-      setTimeout(tick, delta);
-    };
-
-    tick();
-  }, []);
+  const [typewriterContent] = useState([
+    "web development.",
+    "graphic design.",
+    "programming.",
+    "fun stuff!",
+  ]);
 
   return (
     <>
       <Stars />
       <div className="hero">
         <h1>Shanti S.</h1>
+        <TypeWriter typewriterContent={typewriterContent}>I do</TypeWriter>
+      </div>
 
-        <p className="hero-typewriter" ref={typewriterRef}>
-          I do {typewriterState}
-        </p>
+      <div className="about-me">
+        <div className="stats">
+          <p className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</p>
+        </div>
+
+        <div className="my-image">
+          <img src="/images/pixel-me.png"></img>
+        </div>
       </div>
     </>
   );

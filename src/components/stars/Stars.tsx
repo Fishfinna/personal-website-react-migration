@@ -7,7 +7,7 @@ export function Stars() {
   const pointsRef = useRef<StarPoint[]>([]);
 
   //can be set dynamically later if desired
-  const [background] = useState("#1b1b1b");
+  const [background] = useState("#151515");
   const [starColor] = useState("rgba(252, 247, 255, 0.5)");
 
   useEffect(() => {
