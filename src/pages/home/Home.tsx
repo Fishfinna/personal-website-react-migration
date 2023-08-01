@@ -1,22 +1,26 @@
-import { useState } from "react";
 import { Stars } from "../../components/stars/Stars";
 import { TypeWriter } from "../../components/typewriter/typewriter";
 import "./Home.scss";
 
 export default function Home() {
-  const [typewriterContent] = useState([
-    "web development.",
-    "graphic design.",
-    "programming.",
-    "fun stuff!",
-  ]);
-
   return (
     <>
       <Stars />
       <div className="hero">
         <h1>Shanti S.</h1>
-        <TypeWriter typewriterContent={typewriterContent}>I do</TypeWriter>
+        <TypeWriter
+          typewriterContent={[
+            "web development.",
+            "graphic design.",
+            "programming.",
+            "fun stuff!",
+          ]}
+        >
+          I do
+        </TypeWriter>
+        <div className="scroll">
+          <div className="scroll-dot"></div>
+        </div>
       </div>
 
       <div className="about-me">

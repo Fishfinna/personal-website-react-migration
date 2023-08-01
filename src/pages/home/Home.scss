@@ -47,3 +47,48 @@
         font-family: "pixel";
     }
 }
+
+
+.scroll {
+    position: absolute;
+    top: 80vh;
+    width: 40px;
+    height: 60px;
+    outline: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100px;
+    background-size: 100% 200%;
+    animation: fade 2s infinite;
+
+    &-dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 100px;
+        position: relative;
+        top: 10px;
+        left: calc(50% - 5px);
+        animation: bobble 3s infinite;
+    }
+
+    @media (max-width: 768px) {
+        transform: scale(.7);
+    }
+}
+
+@keyframes bobble {
+    0% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0;
+        width: 2px;
+        height: 2px;
+        left: calc(50% - 1px);
+        top: 40px;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
