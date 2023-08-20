@@ -19,7 +19,10 @@ export default function Home() {
           I do
         </TypeWriter>
         <div className="scroll">
-          <div className="scroll-dot"></div>
+          <div className="scroll-outline">
+            <div className="scroll-dot"></div>
+          </div>
+          <p className="scroll-text">Scroll down, learn more</p>
         </div>
       </div>
 

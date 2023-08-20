@@ -24,11 +24,7 @@ export function TypeWriter(props: {
 
       updateTypeWriter(txtRef.current);
 
-      let delta = 150 - Math.random() * 100;
-
-      if (isDeletingRef.current) {
-        delta /= 2;
-      }
+      let delta = isDeletingRef.current ? 75 : 150;
 
       if (!isDeletingRef.current && txtRef.current === fullTxt) {
         delta = 500;
@@ -43,7 +39,7 @@ export function TypeWriter(props: {
     };
 
     tick();
-  }, [props.typewriterContent]);
+  }, [props.typewriterContent, typewriterRef]);
 
   return (
     <p ref={typewriterRef} className="typewriter">

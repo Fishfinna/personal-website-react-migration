@@ -4,17 +4,16 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: "pixel";
 
     h1 {
         margin-top: -20px;
-        font-family: "pixel";
         font-size: 6em;
         color: #fcfbec;
     }
 
     @media (max-width: 768px) {
         h1 {
-            font-family: "pixel";
             font-size: 3em;
             color: #fcfbec;
         }
@@ -44,34 +43,47 @@
 
     .stats-title {
         color: #fcfbec;
-        font-family: "pixel";
     }
 }
 
 
 .scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 80vh;
-    width: 40px;
-    height: 60px;
-    outline: 3px solid rgba(255, 255, 255, 0.4);
-    border-radius: 100px;
-    background-size: 100% 200%;
-    animation: fade 2s infinite;
+
+    &-outline {
+        width: 40px;
+
+        height: 60px;
+        outline: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 100px;
+        position: relative;
+        background-size: 100% 200%;
+        animation: fade 2s infinite;
+
+        @media (max-width: 768px) {
+            transform: scale(.7);
+        }
+    }
 
     &-dot {
         width: 10px;
         height: 10px;
         background-color: rgba(255, 255, 255, 0.5);
         border-radius: 100px;
-        position: relative;
+        position: absolute;
         top: 10px;
         left: calc(50% - 5px);
         animation: bobble 3s infinite;
     }
 
-    @media (max-width: 768px) {
-        transform: scale(.7);
+    &-text {
+        align-items: center;
+        position: relative;
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
