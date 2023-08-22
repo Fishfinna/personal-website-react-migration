@@ -1,5 +1,6 @@
 import { Stars } from "../../components/stars/Stars";
 import { TypeWriter } from "../../components/typewriter/typewriter";
+import { ScrollPrompt } from "../../components/scroll-prompt/scrollPrompt";
 import "./Home.scss";
 
 export default function Home() {
@@ -18,12 +19,7 @@ export default function Home() {
         >
           I do
         </TypeWriter>
-        <div className="scroll">
-          <div className="scroll-outline">
-            <div className="scroll-dot"></div>
-          </div>
-          <p className="scroll-text">Scroll down, learn more</p>
-        </div>
+        <ScrollPrompt />
       </div>
 
       <div className="about-me">
