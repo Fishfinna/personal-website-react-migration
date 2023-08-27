@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <Stars />
+      <img src="/images/treeline.png" className="treeline"></img>
       <div className="hero">
         <h1>Shanti S.</h1>
         <TypeWriter
@@ -21,6 +22,7 @@ export default function Home() {
         </TypeWriter>
         <ScrollPrompt />
       </div>
+      <img src="/images/waves.png" className="waves"></img>
 
       <div className="about-me">
         <div className="stats">
