@@ -1,7 +1,7 @@
 .treeline {
     position: absolute;
     left: 0;
-    bottom: 40px;
+    bottom: 0;
     z-index: -99;
     opacity: 100;
     width: 100%;
@@ -11,7 +11,7 @@
 .waves {
     width: 100%;
     z-index: -99;
-    top: 90vh;
+    top: 100vh;
     left: 0;
     position: absolute;
 }
