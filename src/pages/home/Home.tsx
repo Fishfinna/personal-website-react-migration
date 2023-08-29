@@ -2,6 +2,7 @@ import { Stars } from "../../components/stars/Stars";
 import { TypeWriter } from "../../components/typewriter/typewriter";
 import { ScrollPrompt } from "../../components/scroll-prompt/scrollPrompt";
 import "./Home.scss";
+import { Waves } from "../../components/waves/waves";
 
 export default function Home() {
   return (
@@ -22,8 +23,7 @@ export default function Home() {
         </TypeWriter>
         <ScrollPrompt />
       </div>
-      <img src="/images/waves.png" className="waves"></img>
-
+      <Waves />
       <div className="about-me">
         <div className="stats">
           <p className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</p>
