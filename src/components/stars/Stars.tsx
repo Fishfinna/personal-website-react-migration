@@ -8,7 +8,7 @@ export function Stars() {
 
   //can be set dynamically later if desired
   const [background] = useState("#151515");
-  const [starColor] = useState("rgba(252, 247, 255, 0.5)");
+  const [starColor] = useState("#fcf7ff7f");
 
   useEffect(() => {
     let animationFrameId: number;
