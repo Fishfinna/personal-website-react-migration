@@ -2,8 +2,6 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    z-index: -99;
-    opacity: 100;
     width: 100%;
     overflow: hidden;
 }
@@ -38,17 +36,22 @@
     justify-content: space-around;
     gap: 10px;
 
-    >div {
+    .stats {
         border-radius: 25px;
+
+        &-text {
+            color: #fcfbec;
+        }
+
+        &-title {
+            color: #7b7b7b;
+            ;
+        }
     }
 
     .my-image {
         img {
             margin: 10% -10% -5% -5%;
         }
-    }
-
-    .stats-title {
-        color: #fcfbec;
     }
 }

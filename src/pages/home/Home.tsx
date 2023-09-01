@@ -26,7 +26,13 @@ export default function Home() {
       </div>
       <div className="about-me">
         <div className="stats">
-          <p className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</p>
+          <h2 className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</h2>
+          <div>
+            <p className="stats-text">
+              Hiya! I'm shanti. I'm a software developer, cartoon junkie, and
+              general computer enthusiast.
+            </p>
+          </div>
         </div>
 
         <div className="my-image">
