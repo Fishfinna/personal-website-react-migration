@@ -27,33 +27,3 @@
         }
     }
 }
-
-
-.about-me {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 50vh;
-    width: 100%;
-    justify-content: space-around;
-    gap: 10px;
-
-    .stats {
-        border-radius: 25px;
-
-        &-text {
-            color: #fcfbec;
-        }
-
-        &-title {
-            color: #7b7b7b;
-
-        }
-    }
-
-    .my-image {
-        img {
-            max-width: 25vw;
-            margin: 10% -10% -5% -5%;
-        }
-    }
-}

@@ -1,8 +1,9 @@
 import { Stars } from "../../components/stars/Stars";
 import { TypeWriter } from "../../components/typewriter/typewriter";
 import { ScrollPrompt } from "../../components/scroll-prompt/scrollPrompt";
-import "./Home.scss";
 import { Waves } from "../../components/waves/Waves";
+import { AboutMe } from "../../components/about-me/about-me";
+import "./Home.scss";
 
 export default function Home() {
   return (
@@ -24,21 +25,7 @@ export default function Home() {
         </TypeWriter>
         <ScrollPrompt />
       </div>
-      <div className="about-me">
-        <div className="stats">
-          <h2 className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</h2>
-          <div>
-            <p className="stats-text">
-              Hiya! I'm shanti. I'm a software developer, cartoon junkie, and
-              general computer enthusiast.
-            </p>
-          </div>
-        </div>
-
-        <div className="my-image">
-          <img src="/images/pixel-me.png"></img>
-        </div>
-      </div>
+      <AboutMe />
     </>
   );
 }
