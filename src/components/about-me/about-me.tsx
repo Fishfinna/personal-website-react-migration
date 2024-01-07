@@ -4,6 +4,7 @@ export function AboutMe() {
   return (
     <div className="about-me">
       <div className="stats">
+        <h1 className="stats-header">About</h1>
         <h2 className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</h2>
         <div>
           <p className="stats-text">
