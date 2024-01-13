@@ -1,13 +1,18 @@
 .about-me {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     padding-top: 50vh;
     width: 100%;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 
     .stats {
         border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         &-text {
             color: #fcfbec;
@@ -19,13 +24,39 @@
 
         &-header {
             color: #fcfcfc;
-            margin-bottom: -3%;
         }
 
-        @media (max-width: 1400px) {
+        &-info {
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+
+            @media (max-width: 900px) {
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+            }
+
+            ul {
+                margin-left: -15px;
+                font-family: pixel;
+                line-height: 200%;
+                font-size: 1.7rem;
+                letter-spacing: 1px;
+                list-style-type: '> ';
+                justify-content: center;
+                width: fit-content;
+            }
+
+            li {
+                color: rgb(231, 176, 12);
+            }
+
+            li span {
+                color: rgb(201, 187, 178);
+            }
         }
     }
 
@@ -33,11 +64,19 @@
         img {
             max-width: 25vw;
             margin: 10% -10% -5% -5%;
+
+            @media (max-width: 750px) {
+                max-width: 45vw;
+            }
         }
     }
 
-    @media (max-width: 1400px) {
+    @media (max-width: 900px) {
         flex-direction: column;
         align-items: center;
     }
+}
+
+p {
+    font-family: "fira code";
 }

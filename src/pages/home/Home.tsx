@@ -3,6 +3,7 @@ import { TypeWriter } from "../../components/typewriter/typewriter";
 import { ScrollPrompt } from "../../components/scroll-prompt/scrollPrompt";
 import { Waves } from "../../components/waves/Waves";
 import { AboutMe } from "../../components/about-me/about-me";
+import { Email } from "../../components/email/email";
 import "./Home.scss";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <ScrollPrompt />
       </div>
       <AboutMe />
+      <Email />
     </>
   );
 }

@@ -15,11 +15,12 @@ export function Stars() {
     let ctx: CanvasRenderingContext2D | null = null;
 
     const setup = () => {
-      const amount = 200;
       const baseSpeed = 2.4;
 
       const canvas = canvasRef.current;
       if (!canvas) return;
+      const amount = Math.min(200, Math.floor(canvas.width / 3));
+
       ctx = canvas.getContext("2d");
       if (!ctx) return;
       canvas.width = window.innerWidth;
