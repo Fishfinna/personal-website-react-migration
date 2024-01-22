@@ -16,9 +16,9 @@ export default function Home() {
         <h1>Shanti S.</h1>
         <TypeWriter
           typewriterContent={[
+            "programming.",
             "web development.",
             "graphic design.",
-            "programming.",
             "fun stuff!",
           ]}
         >
