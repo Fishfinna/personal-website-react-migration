@@ -21,10 +21,6 @@ export function AboutMe() {
               <span>Fishfinna12@gmail.com</span>
             </li>
             <li>
-              Phone:&nbsp;
-              <span>250-895-9055</span>
-            </li>
-            <li>
               GitHub:&nbsp;
               <span>
                 <a href="https://github.com/Fishfinna">Fishfinna</a>

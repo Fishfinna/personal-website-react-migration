@@ -2,10 +2,10 @@ import "./Waves.scss";
 
 export function Waves() {
   return (
-    <div className="ocean-container">
-      <div className="ocean">
-        <div className="wave"></div>
-      </div>
+    <div className="box">
+      <div className="wave -one"></div>
+      <div className="wave -two"></div>
+      <div className="wave -three"></div>
     </div>
   );
 }
