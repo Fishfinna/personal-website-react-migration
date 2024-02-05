@@ -4,6 +4,8 @@
     bottom: 0;
     width: 100%;
     overflow: hidden;
+    background: linear-gradient(to top, #090909, transparent 10%);
+    filter: contrast(0) sepia(100%) hue-rotate(30deg) brightness(0.06) saturate(0.28);
 }
 
 .hero {

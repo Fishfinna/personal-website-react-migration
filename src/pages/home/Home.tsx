@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Waves />
       <Stars />
-      <img src="/images/treeline.svg" className="treeline"></img>
+      <img src="/images/treeline.png" className="treeline"></img>
       <div className="hero">
         <h1>Shanti S.</h1>
         <TypeWriter
