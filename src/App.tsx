@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Stars } from "./components/stars/Stars";
+import { Footer } from "./components/footer/Footer";
 
 // styles
 import "./App.scss";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" element={<p>Contact</p>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

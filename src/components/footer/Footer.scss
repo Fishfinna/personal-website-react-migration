@@ -1,8 +1,41 @@
-p {
-    position: absolute;
-    bottom: 20px;
-    margin: 0 50vw;
-    min-width: fit-content;
-    white-space: nowrap;
-    font-family: "pixel";
+footer {
+
+    .line {
+        border: 1.5px solid #939393;
+        width: 60%;
+    }
+
+    .star {
+        position: relative;
+        top: -.73em;
+        font-size: 2em;
+        color: #939393;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+        svg {
+            filter: brightness(0.5);
+            cursor: pointer;
+            max-height: fit-content;
+            animation: all 0.8s ease;
+            max-height: 10vh;
+            margin: 20px;
+
+            width: 20%;
+
+            &:hover {
+                filter: brightness(200%) saturate(200%);
+            }
+        }
+    }
 }

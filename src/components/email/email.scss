@@ -1,5 +1,6 @@
 .email {
     background: #f1f3f3;
+    margin: 20px 0;
 
     @media (min-width: 768px) {
         margin: 100px;
@@ -62,7 +63,7 @@
                 height: 1px;
                 display: block;
                 margin-top: 2px;
-                right: 45vw;
+                right: 42vw;
                 background: #f1f3f3;
                 transition: width .2s ease;
                 -webkit-transition: width .2s ease;
