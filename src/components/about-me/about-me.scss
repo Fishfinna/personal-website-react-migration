@@ -9,6 +9,17 @@
     gap: 10px;
 
     .stats {
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 5s ease;
+        }
+
+        .fade-up.fade-up-active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         border-radius: 25px;
         display: flex;
         flex-direction: column;
@@ -48,16 +59,18 @@
                 list-style-type: '> ';
                 justify-content: center;
                 width: fit-content;
-            }
 
-            li {
-                color: rgb(231, 176, 12);
-            }
+                li {
+                    color: rgb(231, 176, 12);
+                }
 
-            li span {
-                color: rgb(201, 187, 178);
+                li span {
+                    color: rgb(201, 187, 178);
+                }
             }
         }
+
+
     }
 
     .my-image {

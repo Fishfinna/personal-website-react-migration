@@ -13,17 +13,19 @@ export default function Home() {
       <Stars />
       <img src="/images/treeline.png" className="treeline"></img>
       <div className="hero">
-        <h1>Shanti S.</h1>
-        <TypeWriter
-          typewriterContent={[
-            "programming.",
-            "web development.",
-            "graphic design.",
-            "fun stuff!",
-          ]}
-        >
-          I do
-        </TypeWriter>
+        <div className="hero-text">
+          <h1>Shanti S.</h1>
+          <TypeWriter
+            typewriterContent={[
+              "programming.",
+              "web development.",
+              "graphic design.",
+              "fun stuff!",
+            ]}
+          >
+            I do
+          </TypeWriter>
+        </div>
         <ScrollPrompt />
       </div>
       <AboutMe />
