@@ -5,6 +5,7 @@ import { Waves } from "../../components/waves/Waves";
 import { AboutMe } from "../../components/about-me/about-me";
 import { Email } from "../../components/email/email";
 import "./Home.scss";
+import { CareerPath } from "../../components/career-path/careerPath";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <ScrollPrompt />
       </div>
       <AboutMe />
+      <CareerPath />
       <Email />
     </>
   );

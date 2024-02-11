@@ -30,5 +30,9 @@ export function Fader({ children }: any) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  return <div ref={faderDiv}>{children}</div>;
+  return (
+    <div className="fader" ref={faderDiv}>
+      {children}
+    </div>
+  );
 }

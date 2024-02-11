@@ -27,8 +27,8 @@ export function Email() {
   });
 
   return (
-    <Fader>
-      <div className="email">
+    <div className="email">
+      <Fader>
         <h1>Send me an Email</h1>
         <p>Ask me anything or just say hi!</p>
         <form
@@ -67,7 +67,7 @@ export function Email() {
             <button type="submit">Send It Off</button>
           </div>
         </form>
-      </div>
-    </Fader>
+      </Fader>
+    </div>
   );
 }
