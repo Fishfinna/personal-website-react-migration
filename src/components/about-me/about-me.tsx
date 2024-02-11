@@ -7,7 +7,9 @@ export function AboutMe() {
       <div className="stats">
         <Fader>
           <h1 className="stats-header">About</h1>
-          <h2 className="stats-title">Shanti Stein-Gagnon | She/Her | Lv.20</h2>
+          <h2 className="stats-title">
+            Shanti Stein-Gagnon | She/Her | Lv.{new Date().getFullYear() - 2003}
+          </h2>
           <div>
             <p className="stats-text">
               Hiya! I'm shanti. I'm a software engineer currently based out of
