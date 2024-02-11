@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
 import "./email.scss";
+import { Fader } from "../fader/fader";
 
 export function Email() {
   const formik = useFormik({
@@ -26,7 +27,7 @@ export function Email() {
   });
 
   return (
-    <>
+    <Fader>
       <div className="email">
         <h1>Send me an Email</h1>
         <p>Ask me anything or just say hi!</p>
@@ -67,6 +68,6 @@ export function Email() {
           </div>
         </form>
       </div>
-    </>
+    </Fader>
   );
 }

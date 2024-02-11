@@ -1,0 +1,10 @@
+.fade-up {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 1s ease, transform 5s ease;
+}
+
+.fade-up.fade-up-active {
+    opacity: 1;
+    transform: translateY(0);
+}
