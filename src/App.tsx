@@ -19,6 +19,7 @@ function App() {
           element={
             <Suspense fallback={<Stars />}>
               <Home />
+              <Footer />
             </Suspense>
           }
         />
@@ -27,7 +28,6 @@ function App() {
         <Route path="/contact" element={<p>Contact</p>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <Footer />
     </div>
   );
 }

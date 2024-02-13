@@ -11,10 +11,10 @@ export function Fader({ children }: any) {
         listItems.forEach((item: HTMLElement) => {
           const bounding = item.getBoundingClientRect();
           if (
-            bounding.top >= -1000 &&
+            bounding.top >= -800 &&
             bounding.bottom <=
               (window.innerHeight || document.documentElement.clientHeight) +
-                300
+                400
           ) {
             item.classList.add("fade-up-active");
           } else {
