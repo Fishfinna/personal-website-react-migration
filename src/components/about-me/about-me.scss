@@ -1,4 +1,9 @@
 .about-me {
+    @media (max-width: 900px) {
+        transform: scale(0.8);
+    }
+
+    justify-self: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -23,7 +28,7 @@
             color: #7b7b7b;
 
             @media (max-width: 900px) {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
         }
 
@@ -45,6 +50,10 @@
             }
 
             ul {
+                @media (max-width: 900px) {
+                    font-size: 1.3em;
+                }
+
                 margin-left: -15px;
                 font-family: pixel;
                 line-height: 200%;

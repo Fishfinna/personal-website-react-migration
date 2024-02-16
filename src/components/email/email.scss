@@ -55,25 +55,6 @@
                 background-color: #362e2b;
                 cursor: pointer;
             }
-
-            &:after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 1px;
-                display: block;
-                margin-top: 2px;
-                right: 42vw;
-                background: #f1f3f3;
-                transition: width .2s ease;
-                -webkit-transition: width .2s ease;
-            }
-
-            &:hover:after {
-                width: 10vw;
-                left: 45vw;
-                background: #f1f3f3;
-            }
         }
 
         input,
