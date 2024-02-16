@@ -21,6 +21,10 @@
 
         &-title {
             color: #7b7b7b;
+
+            @media (max-width: 900px) {
+                font-size: 1.2em;
+            }
         }
 
         &-header {

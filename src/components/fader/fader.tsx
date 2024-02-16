@@ -1,7 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, ReactNode } from "react";
 import "./fader.scss";
 
-export function Fader({ children }: any) {
+export function Fader({
+  children,
+  bottom = 400,
+}: {
+  children: ReactNode;
+  bottom?: number;
+}) {
   const faderDiv = useRef(null);
 
   useEffect(() => {
@@ -14,7 +20,7 @@ export function Fader({ children }: any) {
             bounding.top >= -800 &&
             bounding.bottom <=
               (window.innerHeight || document.documentElement.clientHeight) +
-                400
+                bottom
           ) {
             item.classList.add("fade-up-active");
           } else {

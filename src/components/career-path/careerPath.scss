@@ -3,4 +3,27 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 20% 0;
+}
+
+div[class^="year-"] {
+    background-color: transparent;
+    outline: 3px solid #e1dede;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    min-width: 100px;
+    min-height: 100px;
+    vertical-align: bottom;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: end;
+
+    h2 {
+        color: #e1dede;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
