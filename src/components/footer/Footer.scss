@@ -21,6 +21,10 @@ footer {
     }
 
     .icons {
+        @media (max-width: 500px) {
+            transform: scale(.9);
+        }
+
         display: flex;
         align-items: center;
         justify-content: center;

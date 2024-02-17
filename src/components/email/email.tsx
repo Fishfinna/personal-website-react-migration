@@ -65,7 +65,7 @@ export function Email() {
               value={formik.values.comments}
             />
             <button type="submit">Send It Off</button>
-          </div> 
+          </div>
         </form>
       </Fader>
     </div>

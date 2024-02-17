@@ -22,7 +22,11 @@ export function AboutMe() {
             <ul>
               <li>
                 Email:&nbsp;
-                <span>Fishfinna12@gmail.com</span>
+                <span>
+                  <a href="mailto:Fishfinna12@gmail.com">
+                    Fishfinna12@gmail.com
+                  </a>
+                </span>
               </li>
               <li>
                 GitHub:&nbsp;

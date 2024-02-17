@@ -27,6 +27,10 @@ div[class^="year-"] {
         justify-content: center;
         align-items: center;
     }
+
+    [class^="details-"] {
+        color: red;
+    }
 }
 
 .gap-year {
