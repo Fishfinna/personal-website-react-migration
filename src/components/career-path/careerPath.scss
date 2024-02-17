@@ -22,7 +22,7 @@ div[class^="year-"] {
     display: flex;
     flex-direction: row;
     background-color: transparent;
-    outline: 3px solid #e1dede;
+    outline: 2px solid #a59d9d;
     padding: 10px;
     margin: 2vh 0;
     width: fit-content;
@@ -36,7 +36,7 @@ div[class^="year-"] {
     align-content: end;
 
     h2 {
-        color: #e1dede;
+        color: #a59d9d;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -67,7 +67,7 @@ div[class^="year-"] {
     width: 2px;
     height: 20px;
     margin: 10px;
-    background-color: rgba(255, 179, 0, 0.854);
+    background-color: rgb(231, 176, 12);
 }
 
 .center {
