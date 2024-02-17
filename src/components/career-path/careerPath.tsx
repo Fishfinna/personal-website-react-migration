@@ -20,6 +20,11 @@ export function CareerPath() {
         "Enrolled in the Computer Information Technology diploma at the British Columbia Institute of Technology",
     },
     {
+      year: 2022,
+      type: "Work",
+      details: "Created and Launched my first mobile app, Heli Rigger Pro",
+    },
+    {
       year: 2023,
       type: "Work",
       details:
@@ -46,7 +51,7 @@ export function CareerPath() {
 
         {events.map(({ year: eventYear, type, details }) => {
           if (year == eventYear) {
-            return <p className={"details-" + type}>{details}</p>;
+            return <p className={"details " + type}>{details}</p>;
           }
         })}
 
