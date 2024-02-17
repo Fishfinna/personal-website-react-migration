@@ -8,57 +8,69 @@ export function CareerPath() {
 
   interface Event {
     year: number;
-    type: "Education" | "Work";
+    type: "education" | "work";
     details: string;
   }
 
   const events: Event[] = [
     {
       year: 2021,
-      type: "Education",
+      type: "education",
       details:
         "Enrolled in the Computer Information Technology diploma at the British Columbia Institute of Technology",
     },
     {
       year: 2022,
-      type: "Work",
+      type: "work",
       details: "Created and Launched my first mobile app, Heli Rigger Pro",
     },
     {
       year: 2023,
-      type: "Work",
+      type: "work",
       details:
         "Worked as a Co-op student at RAZR Financial as a Jr.Software Developer",
     },
     {
       year: 2023,
-      type: "Education",
+      type: "education",
       details: "Graduated from BCIT with distinctions and a 94% GPA",
     },
     {
       year: 2024,
-      type: "Work",
+      type: "work",
       details: "Started as a Software Developer at RAZR Financial",
     },
   ];
 
   for (let year = startYear; year <= currentYear; year++) {
     yearList.push(
-      <Fader bottom={-10} className="center">
-        <div className={`year-${year}`} key={year}>
-          <h2>{year}</h2>
-        </div>
+      <div>
+        <Fader bottom={-10} className="center">
+          <div className="node">
+            <div className={`year-${year}`} key={year}>
+              <h2>{year}</h2>
+            </div>
 
-        {events.map(({ year: eventYear, type, details }) => {
-          if (year == eventYear) {
-            return <p className={"details " + type}>{details}</p>;
-          }
-        })}
-
-        <Fader className="center">
+            {["education", "work"].map((experience) => {
+              return (
+                <div className={"details " + experience}>
+                  {events.map(({ year: eventYear, type, details }) => {
+                    if (year == eventYear && type == experience) {
+                      return (
+                        <>
+                          <h4>{type}</h4>
+                          <p>{details}</p>
+                        </>
+                      );
+                    }
+                  })}
+                </div>
+              );
+            })}
+          </div>
           {year != currentYear ? <div className="gap-year"></div> : null}
         </Fader>
-      </Fader>
+      </div>
     );
   }
 
