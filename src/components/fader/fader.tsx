@@ -1,11 +1,13 @@
-import { useRef, useEffect, useState, ReactNode } from "react";
+import { useRef, useEffect, ReactNode } from "react";
 import "./fader.scss";
 
 export function Fader({
   children,
+  className = "",
   bottom = 400,
 }: {
   children: ReactNode;
+  className?: string;
   bottom?: number;
 }) {
   const faderDiv = useRef(null);
@@ -37,7 +39,7 @@ export function Fader({
     };
   }, []);
   return (
-    <div className="fader" ref={faderDiv}>
+    <div className={"fader " + className} ref={faderDiv}>
       {children}
     </div>
   );
