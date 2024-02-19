@@ -57,10 +57,10 @@ export function CareerPath() {
                   {events.map(({ year: eventYear, type, details }) => {
                     if (year == eventYear && type == experience) {
                       return (
-                        <>
+                        <div className="type">
                           <h4>{type}</h4>
                           <p>{details}</p>
-                        </>
+                        </div>
                       );
                     }
                   })}

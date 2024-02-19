@@ -44,7 +44,6 @@ div[class^="year-"] {
 }
 
 .details {
-    color: #f1f3f3;
     text-align: center;
     padding: 5px;
 
@@ -59,6 +58,20 @@ div[class^="year-"] {
 
         &.education {
             order: 1;
+        }
+    }
+
+    .type {
+        background-color: #f1f3f3;
+        margin: 0 20px;
+        padding: 20px;
+        border-radius: 20px;
+        color: #7b7b7b;
+
+        h4 {
+            color: #4d4141;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
     }
 }
