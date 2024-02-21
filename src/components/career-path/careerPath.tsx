@@ -27,8 +27,7 @@ export function CareerPath() {
     {
       year: 2023,
       type: "work",
-      details:
-        "Worked as a Co-op student at RAZR Financial as a Jr.Software Developer",
+      details: "Worked as a Jr.Software Developer at RAZR Financial",
     },
     {
       year: 2023,
@@ -38,7 +37,7 @@ export function CareerPath() {
     {
       year: 2024,
       type: "work",
-      details: "Started as a Software Developer at RAZR Financial",
+      details: "Started as a full time Software Developer at RAZR Financial",
     },
   ];
 
