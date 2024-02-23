@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route
-          path="/"
+          path="/personal-website-react-migration/"
           element={
             <Suspense fallback={<Stars />}>
               <Home />
@@ -23,9 +23,18 @@ function App() {
             </Suspense>
           }
         />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/projects" element={<p>Projects</p>} />
-        <Route path="/contact" element={<p>Contact</p>} />
+        <Route
+          path="/personal-website-react-migration/about"
+          element={<h1>About</h1>}
+        />
+        <Route
+          path="/personal-website-react-migration/projects"
+          element={<p>Projects</p>}
+        />
+        <Route
+          path="/personal-website-react-migration/contact"
+          element={<p>Contact</p>}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
