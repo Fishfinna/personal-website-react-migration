@@ -2,3 +2,8 @@
     font-family: "pixel";
     src: url('/fonts/pix.ttf')
 }
+
+@font-face {
+    font-family: "fira code";
+    src: url('/fonts/firacode.ttf')
+}
