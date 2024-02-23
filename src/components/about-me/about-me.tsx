@@ -42,7 +42,7 @@ export function AboutMe() {
               </li>
             </ul>
             <div className="my-image">
-              <img src="/images/pixel-me.png"></img>
+              <img src="/personal-website-react-migration/images/pixel-me.png"></img>
             </div>
           </div>
         </Fader>
