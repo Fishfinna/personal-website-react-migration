@@ -9,13 +9,16 @@ export function Email() {
       comments: "",
     },
     onSubmit: (formData) => {
-      fetch("https://formsubmit.co/fishfinna12@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+      fetch(
+        "https://formsubmit.co/fishfinna12@gmail.com/personal-website-react-migration/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      )
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
