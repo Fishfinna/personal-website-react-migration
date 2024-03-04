@@ -48,6 +48,7 @@ export function Email() {
           <div className="email-content">
             <label htmlFor="email">Return Email:</label>
             <input
+              required
               type="email"
               id="return"
               name="email"
@@ -57,6 +58,7 @@ export function Email() {
             />
             <label htmlFor="comments">Message:</label>
             <textarea
+              required
               name="comments"
               id="comments"
               rows={5}
