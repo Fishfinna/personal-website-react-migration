@@ -1,16 +1,19 @@
 import { useFormik } from "formik";
 import "./email.scss";
 import { Fader } from "../fader/fader";
+import { useState } from "react";
 
 export function Email() {
+  const [email, setEmail] = useState<string>("fishfinna12@gmail.com");
+
   const formik = useFormik({
     initialValues: {
       email: "",
       comments: "",
     },
     onSubmit: (formData) => {
-      console.log("submitted email");
-      fetch("https://formsubmit.co/fishfinna12@gmail.com", {
+      console.log("submit");
+      fetch("https://formsubmit.co/" + email, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -20,8 +23,6 @@ export function Email() {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          window.location.href =
-            "https://fishfinna.github.io/personal-website-react-migration/";
         })
         .catch((error) => {
           console.error("Error:", error);
@@ -36,7 +37,7 @@ export function Email() {
         <p>Ask me anything or just say hi!</p>
         <form
           className="about-email"
-          action="https://formsubmit.co/fishfinna12@gmail.com"
+          action={"https://formsubmit.co/" + email}
           method="POST"
         >
           <input type="text" name="_honey" style={{ display: "none" }} />
