@@ -19,6 +19,8 @@ export function Email() {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
+          window.location.href =
+            "https://fishfinna.github.io/personal-website-react-migration/";
         })
         .catch((error) => {
           console.error("Error:", error);
