@@ -1,4 +1,4 @@
-import { useFormik, Form } from "formik";
+import { useFormik } from "formik";
 import "./email.scss";
 import { Fader } from "../fader/fader";
 import { useState } from "react";
@@ -35,7 +35,7 @@ export function Email() {
       <Fader>
         <h1>Send me an Email</h1>
         <p>Ask me anything or just say hi!</p>
-        <Form
+        <form
           className="about-email"
           action={"https://formsubmit.co/" + email}
           method="POST"
@@ -72,7 +72,7 @@ export function Email() {
             />
             <button type="submit">Send It Off</button>
           </div>
-        </Form>
+        </form>
       </Fader>
     </div>
   );
