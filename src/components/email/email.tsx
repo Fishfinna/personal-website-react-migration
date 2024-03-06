@@ -9,6 +9,7 @@ export function Email() {
       comments: "",
     },
     onSubmit: (formData) => {
+      console.log("submitted email");
       fetch("https://formsubmit.co/fishfinna12@gmail.com", {
         method: "POST",
         headers: {
