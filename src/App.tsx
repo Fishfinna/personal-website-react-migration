@@ -10,7 +10,7 @@ import "./App.scss";
 const Home = lazy(() => import("./pages/home/Home"));
 import ErrorPage from "./pages/error-page/ErrorPage";
 
-function App() {
+export default function App() {
   const uri = ""; // can be changed if updated
 
   return (
@@ -33,5 +33,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
