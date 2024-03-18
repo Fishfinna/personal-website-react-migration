@@ -43,20 +43,23 @@ export function CareerPath() {
 
   for (let year = startYear; year <= currentYear; year++) {
     yearList.push(
-      <div>
+      <div key={year}>
         <Fader bottom={-10} className="center">
           <div className="node">
-            <div className={`year-${year}`} key={year}>
+            <div className={`year-${year}`}>
               <h2>{year}</h2>
             </div>
 
             {["education", "work"].map((experience) => {
               return (
-                <div className={"details " + experience}>
+                <div
+                  className={"details " + experience}
+                  key={`${experience}-${year}`}
+                >
                   {events.map(({ year: eventYear, type, details }) => {
-                    if (year == eventYear && type == experience) {
+                    if (year === eventYear && type === experience) {
                       return (
-                        <div className="type">
+                        <div className="type" key={`${type}-${eventYear}`}>
                           <h4>{type}</h4>
                           <p>{details}</p>
                         </div>
@@ -67,7 +70,7 @@ export function CareerPath() {
               );
             })}
           </div>
-          {year != currentYear ? <div className="gap-year"></div> : null}
+          {year !== currentYear ? <div className="gap-year"></div> : null}
         </Fader>
       </div>
     );

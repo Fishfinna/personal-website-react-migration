@@ -11,11 +11,13 @@ const Home = lazy(() => import("./pages/home/Home"));
 import ErrorPage from "./pages/error-page/ErrorPage";
 
 function App() {
+  const uri = ""; // can be changed if updated
+
   return (
     <div className="App">
       <Routes>
         <Route
-          path="/personal-website-react-migration/"
+          path={uri}
           element={
             <Suspense fallback={<Stars />}>
               <Home />
@@ -23,18 +25,9 @@ function App() {
             </Suspense>
           }
         />
-        <Route
-          path="/personal-website-react-migration/about"
-          element={<h1>About</h1>}
-        />
-        <Route
-          path="/personal-website-react-migration/projects"
-          element={<p>Projects</p>}
-        />
-        <Route
-          path="/personal-website-react-migration/contact"
-          element={<p>Contact</p>}
-        />
+        <Route path={uri + "/about"} element={<h1>About</h1>} />
+        <Route path={uri + "/projects"} element={<p>Projects</p>} />
+        <Route path={uri + "/contact"} element={<p>Contact</p>} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
