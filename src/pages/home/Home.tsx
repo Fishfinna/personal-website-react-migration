@@ -12,10 +12,7 @@ export default function Home() {
     <>
       <Waves />
       <Stars />
-      <img
-        src="/personal-website-react-migration/images/treeline.png"
-        className="treeline"
-      ></img>
+      <img src="/images/treeline.png" className="treeline"></img>
       <div className="hero">
         <div className="hero-text">
           <h1>Shanti S.</h1>
