@@ -31,16 +31,12 @@ export function Email() {
       <Fader>
         <h1>Send me an Email</h1>
         <p>Ask me anything or just say hi!</p>
-        <form
-          className="about-email"
-          action="https://formsubmit.co/fishfinna12@gmail.com"
-          method="POST"
-        >
+        <form className="about-email">
           <input type="text" name="_honey" style={{ display: "none" }} />
 
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_invalid" value="false" />
-          <input type="hidden" name="_next" value="http://shawn-tea.me" />
+          <input type="hidden" name="_next" value="https://shawn-tea.me" />
           <div className="email-content">
             <label htmlFor="email">Return Email:</label>
             <input
