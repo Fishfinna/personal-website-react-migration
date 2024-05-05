@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --port 9000",
+    "start": "vite",
     "vite": "vite --host=${npm_config_host} --port=${npm_config_port}",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
