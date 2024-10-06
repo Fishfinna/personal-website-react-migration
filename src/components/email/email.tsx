@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import "./email.scss";
 import { Fader } from "../fader/fader";
 
+// TODO fix
 export function Email() {
   const formik = useFormik({
     initialValues: {
