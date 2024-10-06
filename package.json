@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
-    "vite": "vite --host=${npm_config_host} --port=${npm_config_port}",
+    "start": "vite --port=9000",
+    "vite": "vite --host=${npm_config_host:localhost} --port=${npm_config_port:9000}",
     "predeploy": "vite build",
     "deploy": "gh-pages -d dist",
     "build": "tsc && vite build",
