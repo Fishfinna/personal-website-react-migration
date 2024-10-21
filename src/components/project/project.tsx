@@ -10,6 +10,7 @@ export function Project(params: ProjectParams) {
     <div>
       <h2>{params.name}</h2>
       <a href={params.url}>view</a>
+      <img src={params.thumbnail} />
       <div>{params.children}</div>
     </div>
   );
