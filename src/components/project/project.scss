@@ -1,0 +1,65 @@
+.project-container {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    color: #fefefe;
+    font-family: Helvetica;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: var(--thumbnail-url);
+        background-size: cover;
+        background-position: center;
+        transition: all 1s ease;
+        filter: blur(3px);
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-size: 100%;
+    }
+
+    &:hover::before {
+        background-size: 90%;
+        filter: blur(0px);
+    }
+
+    .project-buttons {
+        align-self: flex-end;
+        margin-top: 20px;
+    }
+
+    a {
+        color: #c0c0c0;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 10px;
+        width: 20%;
+        background: rgba(182, 182, 182, 0.12);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.3px);
+        -webkit-backdrop-filter: blur(6.3px);
+        border: 1px solid rgba(182, 182, 182, 0.14);
+        transition: all 0.2s ease;
+
+        &:hover {
+            color: #fefefa;
+            background: rgba(202, 202, 202, 0.12);
+            padding: 8px;
+            transition: all 0.3s ease;
+        }
+    }
+}
