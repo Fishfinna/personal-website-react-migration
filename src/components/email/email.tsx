@@ -9,23 +9,19 @@ export function Email() {
       comments: "",
       _honey: "",
       _captcha: "false",
-      _next: "https://shawn-tea.me",
       _invalid: "false",
     },
     onSubmit: (formData) => {
-      console.log(formData);
       fetch("https://formsubmit.co/fishfinna12@gmail.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      })
-        .then((response) => response.json())
-        .then(console.log)
-        .catch((error) => {
-          console.error("Error:", error);
-        });
+      }).catch((error) => {
+        console.error("Error:", error);
+      });
+      formik.resetForm();
     },
   });
 
@@ -43,7 +39,6 @@ export function Email() {
             value={formik.values._honey}
           />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://shawn-tea.me" />
           <input type="hidden" name="_invalid" value="false" />
           <div className="email-content">
             <label htmlFor="email">Return Email:</label>
