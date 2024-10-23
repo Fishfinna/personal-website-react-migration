@@ -2,14 +2,18 @@ import { useFormik } from "formik";
 import "./email.scss";
 import { Fader } from "../fader/fader";
 
-// TODO fix
 export function Email() {
   const formik = useFormik({
     initialValues: {
       email: "",
       comments: "",
+      _honey: "",
+      _captcha: "false",
+      _next: "https://shawn-tea.me",
+      _invalid: "false",
     },
     onSubmit: (formData) => {
+      console.log(formData);
       fetch("https://formsubmit.co/fishfinna12@gmail.com", {
         method: "POST",
         headers: {
@@ -18,9 +22,7 @@ export function Email() {
         body: JSON.stringify(formData),
       })
         .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
+        .then(console.log)
         .catch((error) => {
           console.error("Error:", error);
         });
@@ -32,12 +34,17 @@ export function Email() {
       <Fader>
         <h1>Send me an Email</h1>
         <p>Ask me anything or just say hi!</p>
-        <form className="about-email">
-          <input type="text" name="_honey" style={{ display: "none" }} />
-
+        <form className="about-email" onSubmit={formik.handleSubmit}>
+          <input
+            type="text"
+            name="_honey"
+            style={{ display: "none" }}
+            onChange={formik.handleChange}
+            value={formik.values._honey}
+          />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_invalid" value="false" />
           <input type="hidden" name="_next" value="https://shawn-tea.me" />
+          <input type="hidden" name="_invalid" value="false" />
           <div className="email-content">
             <label htmlFor="email">Return Email:</label>
             <input
