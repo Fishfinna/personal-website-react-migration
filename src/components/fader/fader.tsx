@@ -10,14 +10,14 @@ export function Fader({
   className?: string;
   bottom?: number;
 }) {
-  const faderDiv = useRef(null);
+  const faderDiv = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (faderDiv.current) {
         const listItems = faderDiv.current.querySelectorAll("*");
-        listItems.forEach((item: HTMLElement) => {
-          const bounding = item.getBoundingClientRect();
+        listItems.forEach((item) => {
+          const bounding = (item as HTMLElement).getBoundingClientRect();
           if (
             bounding.top >= -800 &&
             bounding.bottom <=
@@ -37,7 +37,8 @@ export function Fader({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [bottom]);
+
   return (
     <div className={"fader " + className} ref={faderDiv}>
       {children}
