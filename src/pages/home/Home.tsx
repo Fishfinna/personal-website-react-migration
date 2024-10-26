@@ -30,6 +30,7 @@ export default function Home() {
         <ScrollPrompt />
       </div>
       <AboutMe />
+      {/* TODO: Project */}
       <CareerPath />
       <Email />
     </>
