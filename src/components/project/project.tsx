@@ -1,3 +1,5 @@
+import "./project.scss";
+
 interface ProjectParams {
   name: string;
   thumbnail: string;
@@ -14,7 +16,7 @@ export function Project(params: ProjectParams) {
   return (
     <div className="project-container" style={projectImage}>
       <h2>{params.name}</h2>
-      <div>{params.children}</div>
+      <p>{params.children}</p>
       <div className="project-buttons">
         {params.codeUrl ? <a href={params.codeUrl}>code</a> : null}
         {params.websiteUrl ? <a href={params.websiteUrl}>website</a> : null}
