@@ -1,11 +1,12 @@
 .project-container {
     position: relative;
     padding: 10px;
-    display: flex;
+    display: grid;
+    justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    width: 50vw;
-    height: 40vw;
+    width: calc(200px + 45vw);
+    height: calc(200px + 10vw);
     color: #fefefe;
     font-family: Helvetica;
     overflow: hidden;
@@ -44,7 +45,7 @@
 
     &:hover {
         a {
-            background: rgba(51, 51, 51, 0.82);
+            background: rgba(130, 130, 130, 0.529);
         }
     }
 
@@ -65,18 +66,19 @@
         backdrop-filter: blur(6.3px);
         -webkit-backdrop-filter: blur(6.3px);
         border: 1px solid rgba(182, 182, 182, 0.14);
-        transition: all 0.2s ease;
+        transition: all 0.7s ease;
 
         &:hover {
             color: #fefefa;
-            background: rgba(78, 78, 78, 0.687);
-            padding: 20px;
-            transition: all 0.3s ease;
+            background: rgba(139, 139, 139, 0.402);
+            border: 1px solid rgba(182, 182, 182, 0.73);
+            padding: 12px;
         }
     }
 
     .project-buttons {
-        align-self: flex-end;
-        margin-top: 20px;
+        align-self: end;
+        justify-self: end;
+        margin: 20px 0;
     }
 }
