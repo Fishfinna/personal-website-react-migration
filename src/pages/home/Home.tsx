@@ -41,6 +41,15 @@ export default function Home() {
         >
           this is an example project
         </Project>
+
+        <Project
+          name="example"
+          thumbnail="https://images.pexels.com/photos/28795942/pexels-photo-28795942/free-photo-of-elegant-bridal-bouquet-with-pink-roses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          websiteUrl="https://example.com"
+          codeUrl="http://example.com"
+        >
+          this is an example project
+        </Project>
       </div>
       <CareerPath />
       <Email />

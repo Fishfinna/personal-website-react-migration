@@ -1,12 +1,13 @@
 .project-container {
     position: relative;
     padding: 10px;
+    margin-top: 10px;
     display: grid;
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
     width: calc(200px + 45vw);
-    height: calc(200px + 10vw);
+    height: calc(250px + 5vw);
     color: #fefefe;
     font-family: Helvetica;
     overflow: hidden;
