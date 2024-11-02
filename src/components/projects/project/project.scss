@@ -1,13 +1,12 @@
-.project-container {
+.project-item {
     position: relative;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     display: grid;
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    width: calc(200px + 45vw);
-    height: calc(250px + 5vw);
+    width: calc(100px + 30vw);
     color: #fefefe;
     font-family: Helvetica;
     overflow: hidden;

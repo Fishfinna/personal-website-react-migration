@@ -1,6 +1,6 @@
 import "./project.scss";
 
-interface ProjectParams {
+export interface ProjectParams {
   name: string;
   thumbnail: string;
   websiteUrl?: string;
@@ -14,7 +14,7 @@ export function Project(params: ProjectParams) {
   } as React.CSSProperties;
 
   return (
-    <div className="project-container" style={projectImage}>
+    <div className="project-item" style={projectImage}>
       <h2>{params.name}</h2>
       <p>{params.children}</p>
       <div className="project-buttons">
