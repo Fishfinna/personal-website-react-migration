@@ -6,7 +6,7 @@ import { AboutMe } from "../../components/about-me/about-me";
 import { Email } from "../../components/email/email";
 import "./Home.scss";
 import { CareerPath } from "../../components/career-path/careerPath";
-import { Project } from "../../components/project/project";
+import { Project } from "../../components/projects/project/project";
 
 export default function Home() {
   return (
