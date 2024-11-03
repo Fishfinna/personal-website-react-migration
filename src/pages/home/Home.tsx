@@ -6,7 +6,7 @@ import { AboutMe } from "../../components/about-me/about-me";
 import { Email } from "../../components/email/email";
 import "./Home.scss";
 import { CareerPath } from "../../components/career-path/careerPath";
-import { Project } from "../../components/projects/project/project";
+import { Projects } from "../../components/projects/projects";
 
 export default function Home() {
   return (
@@ -31,35 +31,7 @@ export default function Home() {
         <ScrollPrompt />
       </div>
       <AboutMe />
-
-      <div className="project-list">
-        <Project
-          name="example"
-          thumbnail="https://images.pexels.com/photos/28795942/pexels-photo-28795942/free-photo-of-elegant-bridal-bouquet-with-pink-roses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          websiteUrl="https://example.com"
-          codeUrl="http://example.com"
-        >
-          this is an example project
-        </Project>
-
-        <Project
-          name="example"
-          thumbnail="https://images.pexels.com/photos/28795942/pexels-photo-28795942/free-photo-of-elegant-bridal-bouquet-with-pink-roses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          websiteUrl="https://example.com"
-          codeUrl="http://example.com"
-        >
-          this is an example project
-        </Project>
-
-        <Project
-          name="example"
-          thumbnail="https://images.pexels.com/photos/28795942/pexels-photo-28795942/free-photo-of-elegant-bridal-bouquet-with-pink-roses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          websiteUrl="https://example.com"
-          codeUrl="http://example.com"
-        >
-          this is an example project
-        </Project>
-      </div>
+      <Projects />
       <CareerPath />
       <Email />
     </>
