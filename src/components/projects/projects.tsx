@@ -2,6 +2,7 @@ import {
   Project,
   ProjectParams,
 } from "../../components/projects/project/project";
+import { Fader } from "../fader/fader";
 import "./projects.scss";
 
 export function Projects() {
@@ -20,17 +21,18 @@ export function Projects() {
 
   projects.forEach((project, index) => {
     projectList.push(
-      //todo add the fader here
-      <div key={project.name}>
-        <Project
-          name={project.name}
-          thumbnail={project.thumbnail}
-          websiteUrl={project.websiteUrl}
-          codeUrl={project.codeUrl}
-        >
-          {project.children}
-        </Project>
-      </div>
+      <Fader>
+        <div key={project.name}>
+          <Project
+            name={project.name}
+            thumbnail={project.thumbnail}
+            websiteUrl={project.websiteUrl}
+            codeUrl={project.codeUrl}
+          >
+            {project.children}
+          </Project>
+        </div>
+      </Fader>
     );
   });
 
