@@ -10,6 +10,7 @@
     color: #fefefe;
     font-family: Helvetica;
     overflow: hidden;
+    transition: all 0.2;
 
     @media (max-width: 768px) {
         width: 250px;
@@ -27,7 +28,7 @@
         background-size: cover;
         background-position: center;
         transition: all 1s ease;
-        filter: blur(3px);
+        filter: blur(3px) brightness(1);
         opacity: 0.25;
         transform: scale(1.2);
         z-index: -1;
@@ -38,9 +39,9 @@
     }
 
     &:hover::before {
-        background-size: 90%;
-        filter: blur(0px);
-        opacity: 0.9;
+        background-size: 95%;
+        filter: blur(1px) brightness(0.5);
+        opacity: 0.7;
     }
 
     &:hover {
@@ -63,14 +64,12 @@
         background: rgba(182, 182, 182, 0.12);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(6.3px);
-        -webkit-backdrop-filter: blur(6.3px);
         border: 1px solid rgba(182, 182, 182, 0.14);
         transition: all 0.7s ease;
 
         &:hover {
             color: #fefefa;
-            background: rgba(139, 139, 139, 0.402);
+            background: rgba(139, 139, 139, 0.263);
             border: 1px solid rgba(182, 182, 182, 0.73);
             padding: 12px;
         }

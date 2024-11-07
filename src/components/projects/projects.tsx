@@ -22,7 +22,7 @@ export function Projects() {
   projects.forEach((project, index) => {
     projectList.push(
       <Fader>
-        <div key={project.name}>
+        <div key={index}>
           <Project
             name={project.name}
             thumbnail={project.thumbnail}
