@@ -13,8 +13,7 @@
     transition: all 0.2;
 
     @media (max-width: 768px) {
-        width: 250px;
-        height: 250px;
+        width: 80vw;
     }
 
     &::before {
