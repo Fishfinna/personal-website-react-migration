@@ -49,6 +49,12 @@
         }
     }
 
+    .project-buttons {
+        align-self: end;
+        justify-self: end;
+        margin: 20px 0;
+    }
+
     a {
         font-family: "pixel";
         font-weight: 600;
@@ -65,6 +71,7 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(182, 182, 182, 0.14);
         transition: all 0.7s ease;
+        flex: 1;
 
         &:hover {
             color: #fefefa;
@@ -72,11 +79,5 @@
             border: 1px solid rgba(182, 182, 182, 0.73);
             padding: 12px;
         }
-    }
-
-    .project-buttons {
-        align-self: end;
-        justify-self: end;
-        margin: 20px 0;
     }
 }
