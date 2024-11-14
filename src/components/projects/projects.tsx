@@ -9,11 +9,10 @@ export function Projects() {
   const projectList: any[] = [];
   const projects: ProjectParams[] = [
     {
-      name: "example",
+      name: "Shawn-tea Video",
       children:
-        "Example text goes here I did stuff and I did tghings and now the things are stuff and it is all good.",
-      thumbnail:
-        "https://images.pexels.com/photos/28795942/pexels-photo-28795942/free-photo-of-elegant-bridal-bouquet-with-pink-roses.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "Shawn-tea video is an anime streaming cross-platform site with minimal bulk.",
+      thumbnail: "./images/projects/shawn-tea-video.png",
       codeUrl: "http://example.com",
     },
     {
