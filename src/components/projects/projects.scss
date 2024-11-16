@@ -1,6 +1,8 @@
 .project-list {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 100px;
 }

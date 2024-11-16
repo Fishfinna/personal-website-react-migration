@@ -18,8 +18,16 @@ export function Project(params: ProjectParams) {
       <h2>{params.name}</h2>
       <p>{params.children}</p>
       <div className="project-buttons">
-        {params.codeUrl ? <a href={params.codeUrl}>code</a> : null}
-        {params.websiteUrl ? <a href={params.websiteUrl}>website</a> : null}
+        {params.codeUrl ? (
+          <a target="_blank" href={params.codeUrl}>
+            code
+          </a>
+        ) : null}
+        {params.websiteUrl ? (
+          <a target="_blank" href={params.websiteUrl}>
+            website
+          </a>
+        ) : null}
       </div>
     </div>
   );
