@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { StarPoint } from "./StarPoint";
 import "./Stars.scss";
 
@@ -6,9 +6,22 @@ export function Stars() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const pointsRef = useRef<StarPoint[]>([]);
 
-  //can be set dynamically later if desired
   const [background] = useState("#151515");
   const [starColor] = useState("#fcf7ff7f");
+
+  const handleClick = useCallback((event: MouseEvent) => {
+    console.log("here");
+    const baseSpeed = 2.4;
+    pointsRef.current.push(
+      new StarPoint(
+        event.clientX,
+        event.clientY,
+        Math.random() * (baseSpeed / 10) - baseSpeed / 20,
+        Math.random() * (baseSpeed / 10) - baseSpeed / 20
+      )
+    );
+    pointsRef.current.shift();
+  }, []);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -43,6 +56,7 @@ export function Stars() {
         ctx.fillRect(1, 1, canvas.width, canvas.height);
       }
 
+      window.addEventListener("click", handleClick);
       draw();
     };
 
@@ -83,7 +97,6 @@ export function Stars() {
       });
 
       ctx.globalCompositeOperation = "source-over";
-
       pointsRef.current.forEach((point) => {
         if (ctx) {
           point.draw(ctx);
@@ -110,9 +123,10 @@ export function Stars() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("click", handleClick);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [background, starColor]);
+  }, [background, starColor, handleClick]);
 
   return <canvas ref={canvasRef} />;
 }
