@@ -16,6 +16,14 @@ export function Projects() {
       websiteUrl: "https://fishfinna.github.io/anime/",
       codeUrl: "https://github.com/Fishfinna/anime",
     },
+    {
+      name: "Shawn-tea Video",
+      children:
+        "shawn-tea video is a cross-platform anime streaming site with minimal bulk. It is inspired by the popular ani-cli command line tool, but runs completely on the browser.",
+      thumbnail: "./images/projects/shawn-tea-video.png",
+      websiteUrl: "https://fishfinna.github.io/anime/",
+      codeUrl: "https://github.com/Fishfinna/anime",
+    },
   ];
 
   projects.forEach((project, index) => {
