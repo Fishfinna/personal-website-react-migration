@@ -18,8 +18,7 @@ export function Projects() {
     },
     {
       name: "Quiz Me Katakana",
-      children:
-        "shawn-tea video is a cross-platform anime streaming site with minimal bulk. It is inspired by the popular ani-cli command line tool, but runs completely on the browser.",
+      children: "Quiz me katakana...",
       thumbnail: "./images/projects/quiz-me-katakana.png",
       websiteUrl: "https://fishfinna.github.io/anime/",
       codeUrl: "https://github.com/Fishfinna/anime",
