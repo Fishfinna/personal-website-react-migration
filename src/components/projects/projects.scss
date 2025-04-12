@@ -4,4 +4,9 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+
+    @media (min-width: 1000px) {
+        flex-direction: row;
+        align-items: start;
+    }
 }
