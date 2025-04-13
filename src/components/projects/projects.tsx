@@ -20,7 +20,7 @@ export function Projects() {
       name: "Quiz Me Katakana",
       children: "Quiz me katakana...",
       thumbnail: "./images/projects/quiz-me-katakana.png",
-      websiteUrl: "https://fishfinna.github.io/anime/",
+      websiteUrl: "https://fishfinna.github.io/quiz-me-katakana/",
       codeUrl: "https://github.com/Fishfinna/anime",
     },
   ];
