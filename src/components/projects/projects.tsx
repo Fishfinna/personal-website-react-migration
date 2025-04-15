@@ -22,7 +22,7 @@ export function Projects() {
         "Quiz me katakana is a highly customizable gameification system for learning katakana and hiragana japanese characters.",
       thumbnail: "./images/projects/quiz-me-katakana.png",
       websiteUrl: "https://fishfinna.github.io/quiz-me-katakana/",
-      codeUrl: "https://github.com/Fishfinna/anime",
+      codeUrl: "https://github.com/Fishfinna/quiz-me-katakana",
     },
   ];
 
