@@ -15,6 +15,7 @@ export function Projects() {
       thumbnail: "./images/projects/shawn-tea-video.png",
       websiteUrl: "https://fishfinna.github.io/anime/",
       codeUrl: "https://github.com/Fishfinna/anime",
+      icon: "./icons/project-icons/tea-video.ico",
     },
     {
       name: "Quiz Me Katakana",
@@ -23,20 +24,14 @@ export function Projects() {
       thumbnail: "./images/projects/quiz-me-katakana.png",
       websiteUrl: "https://fishfinna.github.io/quiz-me-katakana/",
       codeUrl: "https://github.com/Fishfinna/quiz-me-katakana",
+      icon: "./icons/project-icons/kana.ico",
     },
   ];
 
   projects.forEach((project, index) => {
     projectList.push(
       <Fader key={index}>
-        <Project
-          name={project.name}
-          thumbnail={project.thumbnail}
-          websiteUrl={project.websiteUrl}
-          codeUrl={project.codeUrl}
-        >
-          {project.children}
-        </Project>
+        <Project {...project}>{project.children}</Project>
       </Fader>
     );
   });

@@ -6,6 +6,7 @@ export interface ProjectParams {
   websiteUrl?: string;
   codeUrl?: string;
   children?: React.ReactNode;
+  icon?: string;
 }
 
 export function Project(params: ProjectParams) {
@@ -13,9 +14,17 @@ export function Project(params: ProjectParams) {
     "--project-thumbnail-url": `url(${params.thumbnail})`,
   } as React.CSSProperties;
 
+  console.log({ ico: params.icon });
+
   return (
     <div className="project-item" style={projectImage}>
-      <h2>{params.name}</h2>
+      <span>
+        {params.icon ? (
+          <img className="project-icon" src={params.icon} />
+        ) : null}
+        <h2>{params.name}</h2>
+      </span>
+
       <p>{params.children}</p>
       <div className="project-buttons">
         {params.codeUrl ? (
