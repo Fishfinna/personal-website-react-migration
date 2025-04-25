@@ -39,6 +39,11 @@ export function CareerPath() {
       type: "work",
       details: "Started as a full time Software Developer at RAZR Financial",
     },
+    {
+      year: 2025,
+      type: "work",
+      details: "Promoted to Software Developer II",
+    },
   ];
 
   for (let year = startYear; year <= currentYear; year++) {
