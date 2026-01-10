@@ -44,6 +44,11 @@ export function CareerPath() {
       type: "work",
       details: "Promoted to Software Developer II",
     },
+    {
+      year: 2026,
+      type: "work",
+      details: "Promoted to Team Lead in CI/CD Automation",
+    },
   ];
 
   for (let year = startYear; year <= currentYear; year++) {
